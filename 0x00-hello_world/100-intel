@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -S -masm=intel $CFILE -o ${CFILE%.*}.s

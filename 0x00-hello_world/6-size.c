@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stderr.h>
 /**
  * main- Main function
  * Return: Returns 0 always when  successful

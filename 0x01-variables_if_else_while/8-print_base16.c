@@ -9,21 +9,13 @@
  */
 int main(void)
 {
-	char c;
-	int i;
+	int i = 0;
+	int c = 'a';
 
-	for (i = 0; i < 16; i++)
-	{
-		if (i < 10)
-		{
-			c = i + '0';
-		}
-		else
-		{
-			c = 1 - 10 + 'a';
-		}
+	for (; i < 10; i++)
+		putchar('0' + i % 10);
+	for (; c <= 'f'; c++)
 		putchar(c);
-	}
 	putchar('\n');
 	return (0);
 }

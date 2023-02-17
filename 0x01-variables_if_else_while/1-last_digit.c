@@ -4,9 +4,9 @@
 /* more headers goes there */
 
 /**
- * main - Entry point
+ * main - Entry point for the main function
  *
- * Return: Always 0 (Success)
+ * Return: Returning 0 if successful
  */
 int main(void)
 {

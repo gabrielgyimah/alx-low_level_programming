@@ -1,26 +1,26 @@
 #include "stdio.h"
 
 /**
- * add - This function prints all natural numbers
- * @n: the input value
+ * print_to_98 - This function prints all natural numbers
+ * @i: the input value
  * Return: Returns none
  */
 
-void print_to_98(int n)
+void print_to_98(int i)
 {
-	if (n > 98)
+	if (i > 98)
 	{
-		for (; n > 98; n--)
+		for (; i > 98; i--)
 		{
-			printf("%d, ", n);
+			printf("%d, ", i);
 		}
 	}
-	else if (n < 98)
+	else if (i < 98)
 	{
-		for (; n < 98; n++)
+		for (; i < 98; i++)
 		{
-			printf("%d, ", n);
+			printf("%d, ", i);
 		}
 	}
-	printf("%d\n", n);
+	printf("%d\n", i);
 }

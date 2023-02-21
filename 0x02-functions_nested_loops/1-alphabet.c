@@ -1,18 +1,16 @@
 #include "main.h"
-#included "_putchar.c"
-/*
- * print_alphabet - Entry point
- * Return: Returns 0 when the main function runs succesfully
+/**
+ * print_alphabet - prints _putchar
+ *
+ * _putchar: Always 0
  */
-int main(void)
+void print_alphabet(void)
 {
-	char c = print_alphabet('a');
+	char j;
 
-	while (c <= 'z')
+	for (j = 'a'; j <= 'z'; j++)
 	{
-		_putchar(c);
-		c++;
+		_putchar(j);
 	}
-
-	return (0);
+	_putchar('\n');
 }

@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 /**
- * _abs- This prints the fibonacci sequence
+ *main- This prints the fibonacci sequence
  *
  * Return: Returns 0 when successul
  */
 
 int main(void)
 {
-	int n;
-	long int y1, y2, c;
+	int c;
+	long int n1, n2, fn;
 
-	y1 = 1;
-	y2 = 2;
-	printf("%ld, %ld", y2, y2);
-	for (n = 0; n < 48; n++)
+	n1 = 1;
+	n2 = 2;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 48; c++)
 	{
-		c = y1 + y2;
-		printf(", %ld", c);
-		y1 = y2;
-		y2 = c;
+		fn = n1 + n2;
+		printf(", %ld", fn);
+		n1 = n2;
+		n2 = fn;
 	}
 	printf("\n");
 	return (0);

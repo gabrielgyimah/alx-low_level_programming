@@ -1,8 +1,11 @@
 #include <stdio.h>
-/*
- *main- Entry point
- *Return: Returns 0 when the main function runs succesfully
+
+/**
+ * main - prints _putchar
+ *
+ * Return: Always 0
  */
+
 int main(void)
 {
 	char c[] = "_putchar";

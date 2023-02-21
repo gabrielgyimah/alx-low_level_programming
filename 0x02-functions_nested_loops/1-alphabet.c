@@ -1,12 +1,12 @@
 #include "main.h"
-#include "0-putchar.c"
+#included "_putchar.c"
 /*
  * print_alphabet - Entry point
  * Return: Returns 0 when the main function runs succesfully
  */
-void print_alphabet(void)
+int main(void)
 {
-	char c = 'a';
+	char c = print_alphabet('a');
 
 	while (c <= 'z')
 	{

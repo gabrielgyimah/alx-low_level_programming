@@ -5,17 +5,18 @@
  *
  * Return: Void
  */
+
 void print_most_numbers(void)
 {
-	int i;
+	char n;
 
-	for (i = '0'; i <= '9'; i++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		if(i == '2' || i == '4')
-		{
+		if (n == '2' || n == '4')
 			continue;
-		}
-		_putchar(i);
+		_putchar(n);
 	}
+
 	_putchar('\n');
+
 }

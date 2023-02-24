@@ -6,14 +6,17 @@
  *
  * Return: 1 if c is a digit and 0 for otherwise
  */
+
 int _isdigit(int c)
 {
-	int i;
+	int n;
 
-	for (i = '0'; i < '9'; i++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		if (i == c)
+		if (c == n)
 			return (1);
 	}
+
 	return (0);
 }
+

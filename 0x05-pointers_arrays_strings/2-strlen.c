@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int length_of_string = 0;
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{

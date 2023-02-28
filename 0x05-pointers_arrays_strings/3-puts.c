@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * _puts - updates the value it points to to 98
- * @str: Points to the int variable n
+ * _puts - Prints a string followed by a new line.
  *
- * Return: Void
+ * @str: char pointer
+ *
+ * Return: Nothing
  */
+
 
 void _puts(char *str)
 {

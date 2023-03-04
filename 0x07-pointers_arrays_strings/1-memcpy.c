@@ -3,7 +3,7 @@
 /**
  * _memcpy - Copies memory block to another block
  *
- * @dest: destination block 
+ * @dest: destination block
  * @src: source block
  * @n: The block size
  * Return: Pointer

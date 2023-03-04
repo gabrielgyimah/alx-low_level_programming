@@ -1,11 +1,14 @@
 #include "main.h"
+
 /**
- * _memset: fills a block of  memory with a constant byte.
+ * _memset - Fills memory block with a constant value
+ *
  * @s: Pointer
  * @b: Constant byte
  * @n: The blick to be filled
  * Return: Pointer
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;

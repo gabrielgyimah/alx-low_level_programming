@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * _strbrk - Copies memory block to another block
+ * _strpbrk - searches a string for any of a set of bytes
  *
  * @s: Pointer to the source string
  * @accept: Pointer to the string to be checked

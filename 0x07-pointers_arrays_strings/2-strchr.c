@@ -17,15 +17,14 @@ char *_strchr(char *s, char c)
 	int lenght_of_string = strlen(s);
 	char *ptrofC = &c;
 
-	for (i = 0; i <= lenght_of_string; i++)
+	for (i = 0; i < lenght_of_string; i++)
 	{
 		if (s[i] == c)
 		{
+			ptrofC = &s[i];
 			index = 1;
 			break;
 		}
-		else
-			break;
 	}
 
 	if (index == 1)

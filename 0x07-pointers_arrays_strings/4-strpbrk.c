@@ -3,11 +3,11 @@
 #include <stddef.h>
 
 /**
- * _strspn - Copies memory block to another block
+ * _strbrk - Copies memory block to another block
  *
  * @s: Pointer to the source string
- * @accept: Pointer to the string string to be checked
- * Return: Number of bytes of accept found in s
+ * @accept: Pointer to the string to be checked
+ * Return: Null
  */
 
 char *_strpbrk(char *s, char *accept)

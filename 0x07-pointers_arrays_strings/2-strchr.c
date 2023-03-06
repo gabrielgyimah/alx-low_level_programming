@@ -1,34 +1,26 @@
 #include "main.h"
-#include <string.h>
+#include <stddef.h>
 
 /**
- * _strchr -  locates a character in a string
- *
- * @s: the string
- * @c: the character
- * Return: Pointer or NULL
+ * _strchr - locates a character in a string
+ * @s: main string char pointer
+ * @c: substring char
+ * Return: char pointer
  */
+
 
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	int index = -1;
-	int lenght_of_string = strlen(s);
-	char *ptrofC = &c;
-
-	for (i = 0; i < lenght_of_string; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-		{
-			ptrofC = &s[i];
-			index = 1;
-			break;
-		}
+		if (*s == c)
+			return (s);
+		s++;
 	}
 
-	if (index == 1)
-		return (ptrofC);
-	else
-		return (NULL);
+	if (c == '\0')
+		return (s);
+
+	return (NULL);
 }
+

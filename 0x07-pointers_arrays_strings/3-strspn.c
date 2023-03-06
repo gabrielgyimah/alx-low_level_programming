@@ -5,9 +5,9 @@
 /**
  * _strspn - Copies memory block to another block
  *
- * @s: destination block
- * @accept: source block
- * Return: Pointer
+ * @s: Pointer to the source string
+ * @accept: Pointer to the string string to be checked
+ * Return: Number of bytes of accept found in s
  */
 
 unsigned int _strspn(char *s, char *accept)
@@ -19,8 +19,9 @@ unsigned int _strspn(char *s, char *accept)
 	int actual_byte = 0;
 
 	for (i = 0; i < lenght_of_s; i++)
-	{	
+	{
 		bool found_match = false;
+
 		for (j = 0; j < lenght_of_accept; j++)
 		{
 			if (accept[j] == s[i])

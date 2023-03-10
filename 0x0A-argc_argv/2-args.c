@@ -12,17 +12,11 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 1;
+	int i;
 
-	for (i = 1; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
-		int currv = strtol(argv[i], NULL, 10);
-
-		sum *= currv;
+		printf("%s\n", argv[i]);
 	}
-
-	printf("%d\n", sum);
-
 	return (0);
-
 }

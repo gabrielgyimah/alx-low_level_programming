@@ -21,12 +21,14 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	else if (ptrArray == NULL)
+		return (NULL);
 	else
 	{
 		for (i = 0; i < size; i++)
 		{
 			ptrArray[i] = c;
 		}
+		return (ptrArray);
 	}
-	return (ptrArray);
 }

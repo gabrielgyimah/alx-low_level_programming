@@ -12,23 +12,23 @@
 
 char *_strdup(char *str)
 {
-	char *ptrArray;
+	char *s;
 	unsigned int i, length_of_str = strlen(str);
 
-	ptrArray = (char *) malloc(sizeof(str));
+	s = (char *) malloc(sizeof(str));
 
 	if (str == NULL)
 		return (NULL);
 
-	else if (ptrArray == NULL)
+	else if (s == NULL)
 		return (NULL);
 
 	for (i = 0; i < length_of_str; i++)
 	{
-		ptrArray[i] = str[i];
+		s[i] = str[i];
 	}
 
-	ptrArray[i] = '\0';
+	s[i] = '\0';
 
-	return (ptrArray);
+	return (s);
 }

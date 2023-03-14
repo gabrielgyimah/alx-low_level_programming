@@ -18,6 +18,8 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
+	else if (ptrArray == NULL)
+		return (NULL);
 
 	for (i = 0; i < sizeof(str); i++)
 	{

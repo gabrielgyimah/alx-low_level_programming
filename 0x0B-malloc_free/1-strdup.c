@@ -19,6 +19,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
+
 	else if (ptrArray == NULL)
 		return (NULL);
 
@@ -26,6 +27,8 @@ char *_strdup(char *str)
 	{
 		ptrArray[i] = str[i];
 	}
+
+	ptrArray[i] = '\0';
 
 	return (ptrArray);
 }

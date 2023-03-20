@@ -7,12 +7,12 @@
  * @name: pointer
  * @age: Pointer
  * @owner: Pointer
+ * Return: Pointer to the new object
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int len_n = strlen(name);
-	int len_o = strlen(owner);
+	int len_n = strlen(name), int len_o = strlen(owner);
 	char *new_name, *new_owner;
 
 	dog_t *n_dog = malloc(sizeof(*n_dog));
@@ -24,9 +24,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	if (name == NULL)
-	{
 		return (NULL);
-	}
 	new_name = malloc(sizeof(*new_name) * len_n + 1);
 	if (new_name == NULL)
 	{
@@ -35,6 +33,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
+	if (owner == NULL)
+		return (NULL);
 	new_owner = malloc(sizeof(*new_owner) * len_o + 1);
 	if (new_owner == NULL)
 	{

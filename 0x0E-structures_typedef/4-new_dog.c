@@ -1,52 +1,55 @@
 #include "dog.h"
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 /**
- * new_dog - creates a new dog.
- * @name: pointer
- * @age: Pointer
- * @owner: Pointer
- * Return: Pointer to the new object
+ * new_dog - creates a new dog
+ * @name: char pointer
+ * @age: float
+ * @owner: char pointer
+ * Return: Pointer to a new dog
  */
+
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int len_n = strlen(name), len_o = strlen(owner);
-	char *new_name, *new_owner;
+	int n_len, o_len;
+	char *nname, *nowner;
 
-	dog_t *n_dog = malloc(sizeof(*n_dog));
+	dog_t *ndog = malloc(sizeof(*ndog));
 
-	if (n_dog == NULL)
+	if (ndog == NULL)
 	{
-		free(n_dog);
+		free(ndog);
 		return (NULL);
 	}
-
 	if (name == NULL)
 		return (NULL);
-	new_name = malloc(sizeof(*new_name) * len_n + 1);
-	if (new_name == NULL)
+	n_len = strlen(name);
+	nname = malloc(sizeof(*nname) * n_len + 1);
+	if (nname == NULL)
 	{
-		free(n_dog);
-		free(new_name);
+		free(nname);
+		free(ndog);
 		return (NULL);
 	}
-
 	if (owner == NULL)
 		return (NULL);
-	new_owner = malloc(sizeof(*new_owner) * len_o + 1);
-	if (new_owner == NULL)
+	o_len = strlen(owner);
+	nowner = malloc(sizeof(*nowner) * o_len + 1);
+	if (nowner == NULL)
 	{
-		free(n_dog);
-		free(new_owner);
-		free(new_owner);
+		free(nname);
+		free(nowner);
+		free(ndog);
 		return (NULL);
 	}
-	strcpy(new_name, name);
-	strcpy(new_owner, owner);
-	n_dog->name = new_name;
-	n_dog->owner = new_owner;
-	n_dog->age = age;
-	return (n_dog);
+	strcpy(nname, name);
+	strcpy(nowner, owner);
+	ndog->age = age;
+	ndog->name = nname;
+	ndog->owner = nowner;
+
+	return (ndog);
 }

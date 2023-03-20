@@ -1,7 +1,12 @@
 #ifndef TASK
 #define TASK
 
-/* struct dog - Defines a struct template */
+/**
+ * struct dog - Defines a struct template
+ * @name: Char pointer
+ * @age: float
+ * @owner: char pointer
+ */
 
 struct dog
 {
@@ -9,4 +14,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
 #endif

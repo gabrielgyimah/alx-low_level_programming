@@ -1,52 +1,99 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
+
 /**
  * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ * @format: format string
+ * Return: Nothing
  */
+
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *str;
-	int i = 0;
-	char c;
-	float f;
+	char *sep;
+	prv_t prv[] = {
+		{'c', pr_ch},
+		{'i', pr_int},
+		{'f', pr_flt},
+		{'s', pr_str}
+	};
+	int i = 0, k = 0;
+
+	sep = "";
 
 	va_start(args, format);
 
 	while (format != NULL && format[i])
 	{
-		switch (format[i])
+		k = 0;
+		while (k < 4)
 		{
-			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
+			if (prv[k].id == format[i])
+			{
+				printf("%s", sep);
+				prv[k].f(args);
+				sep = ", ";
 				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				f = va_arg(args, double);
-				printf("%f", f);
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-				printf("%s", str);
-				break;
-			default:
-				i++;
-				continue;
+			}
+			k++;
 		}
-		if (format[i + 1] != '\0')
-			printf(", ");
+
 		i++;
 	}
+
 	va_end(args);
 	printf("\n");
+}
+
+/**
+ * pr_ch - prints char
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_ch(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+
+/**
+ * pr_int - prints int
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+ * pr_flt - prints float
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_flt(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+
+/**
+ * pr_str - prints string
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_str(va_list args)
+{
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", str);
 }

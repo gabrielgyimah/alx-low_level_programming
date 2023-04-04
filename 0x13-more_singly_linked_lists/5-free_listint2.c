@@ -21,10 +21,10 @@ void free_listint2(listint_t **head)
 		*head = NULL;
 		return;
 	}
-	
+
 	main_temp = *head;
-	
-	while(main_temp != NULL)
+
+	while (main_temp != NULL)
 	{
 		listint_t *temp = *head->next;
 

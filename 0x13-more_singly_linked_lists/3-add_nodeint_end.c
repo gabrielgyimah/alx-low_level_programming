@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint -  adds a new node at the end of a listint_t list
+ * add_nodeint_end -  adds a new node at the end of a listint_t list
  *
  * @head: a doouble pointer that points to the head of the list
  * @n: the int parameter of the current struct variable or list item

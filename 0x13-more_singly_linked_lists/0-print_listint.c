@@ -5,7 +5,7 @@
  *
  * @h: int parameter coming rom the struct variable
  *
- * Returns: The number of elements in the list
+ * Return: The number of elements in the list
  */
 
 size_t print_listint(const listint_t *h)

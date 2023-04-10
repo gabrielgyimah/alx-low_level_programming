@@ -1,7 +1,5 @@
 #include "main.h"
 
-unsigned int power(unsigned int base, unsigned int exponent);
-
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
  *

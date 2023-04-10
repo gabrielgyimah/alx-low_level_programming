@@ -10,7 +10,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 0, mask = 1UL << (sizeof(unsigned long int) * 8 -1);
+	unsigned long int i = 0, mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 
 	if (n == 0)
 	{

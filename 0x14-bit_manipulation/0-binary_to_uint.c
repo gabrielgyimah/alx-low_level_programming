@@ -13,21 +13,20 @@ unsigned int power(unsigned int base, unsigned int exponent);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, count = 0, y, convert = 0, actual_value = 0, exponent = 1;
-	unsigned int base = 2;
 
-	if (arr == NULL)
+	if (b == NULL)
 	{
 		return (0);
 	}
 
-	for (i = 0; arr[i] != '\0'; i++)
+	for (i = 0; b[i] != '\0'; i++)
 	{
 		count++;
 	}
 
 	for (y = count - 1; y >= 0; y--)
 	{
-		convert = arr[y - 1] - '0';
+		convert = b[y] - '0';
 		if (convert != 1 && convert != 0)
 		{
 			return (0);

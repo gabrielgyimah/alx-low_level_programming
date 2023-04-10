@@ -1,39 +1,40 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts a binary number to an unsigned int.
+ * binary_to_uint - converts a binary number to an unsigned int
  *
  * @b: binary
  *
- * Return: unsigned int
+ * Return: int
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-        unsigned int i, count = 0, y, convert = 0, actual_value = 0, exponent = 1;
+	int i, y, count = 0, increment;
+	unsigned int binary, ans = 0;
 
-        if (b == NULL)
-        {
-                return (0);
-        }
+	if (b == NULL)
+	{
+		return (0);
+	}
 
-        for (i = 0; b[i] != '\0'; i++)
-        {
-                count++;
-        }
+	for (y = 0; b[y] != '\0'; y++)
+	{
+		count++;
+	}
 
-        for (y = count - 1; y >= 0; y--)
-        {
-                convert = b[y] - '0';
-                if (convert != 1 && convert != 0)
-                {
-                        return (0);
-                }
-                else
-                {
-                        actual_value = actual_value + (convert * exponent);
-                        exponent = exponent * 2;
-                }
-        }
-        return (actual_value);
+	for (i = count - 1; i >= 0; i--)
+	{
+		binary = b[i] - '0';
+		if (binary != 1 && binary != 0)
+		{
+			return (0);
+		}
+		else
+		{
+			ans = ans + (binary * increment);
+			increment = increment * 2;
+		}
+	}
+	return (ans);
 }

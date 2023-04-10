@@ -5,12 +5,12 @@ unsigned int power(unsigned int base, unsigned int exponent);
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
  *
- * @arr: binary
+ * @b: binary
  *
  * Return: unsigned int
  */
 
-unsigned int binary_to_uint(char *arr)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, count = 0, y, convert = 0, actual_value = 0, exponent = 1;
 	unsigned int base = 2;

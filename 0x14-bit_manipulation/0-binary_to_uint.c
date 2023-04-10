@@ -34,7 +34,7 @@ unsigned int binary_to_uint(const char *b)
 		else
 		{
 			actual_value = actual_value + (convert * exponent);
-			exponent = exponent + exponent;
+			exponent = exponent * 2;
 		}
 	}
 	return (actual_value);

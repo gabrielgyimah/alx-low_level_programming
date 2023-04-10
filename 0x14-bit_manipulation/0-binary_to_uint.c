@@ -10,8 +10,8 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i, y, count = 0, increment = 1;
-	unsigned int binary, ans = 0;
+	int i, y, count = 0, exponent = 1;
+	unsigned int convert, ans = 0;
 
 	if (b == NULL)
 	{
@@ -25,15 +25,15 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = count - 1; i >= 0; i--)
 	{
-		binary = b[i] - '0';
-		if (binary != 1 && binary != 0)
+		convert = b[i] - '0';
+		if (convert != 1 && convert != 0)
 		{
 			return (0);
 		}
 		else
 		{
-			ans = ans + (binary * increment);
-			increment = increment * 2;
+			ans = ans + (convert * exponent);
+			 exponent *= 2;
 		}
 	}
 	return (ans);

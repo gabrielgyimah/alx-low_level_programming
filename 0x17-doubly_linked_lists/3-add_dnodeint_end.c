@@ -6,7 +6,7 @@
  * @head: The firts node in the list
  * @n: The n value we're assigning to the  new node
  *
- * Retrun: the new node and NULL if unsuccesful
+ * Return: the new node and NULL if unsuccesful
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)

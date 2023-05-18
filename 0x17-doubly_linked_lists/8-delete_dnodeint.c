@@ -43,7 +43,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		}
 
 		curr = curr->next;
-		idx++;
+		pos++;
 	}
 	if (pos == index)
 	{

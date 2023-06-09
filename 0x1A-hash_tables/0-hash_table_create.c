@@ -15,7 +15,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size <= 0)
 		return (NULL);
 
-	map = malloc(sizeof(hash_table_t) * size);
+	map = malloc(sizeof(map));
 	if (!map)
 	{
 		free(map);
@@ -34,8 +34,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	while (counter < size)
 	{
-		map->array[counter] = NULL;
-		counter++;
+		map->array[counter++] = NULL;
 	}
 
 	return (map);

@@ -9,7 +9,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned int counter = 0;
+	unsigned long counter = 0;
 	hash_table_t *map;
 
 	if (size <= 0)

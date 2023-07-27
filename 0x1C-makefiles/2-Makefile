@@ -1,0 +1,18 @@
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC:.c=.o)
+NAME=school
+DEPFLAGS=-MMD -MP
+
+%.o: %.c
+	$(CC) $(DEPFLAGS) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $(NAME)
+
+-include $(OBJ:.o=.d)
+
+clean:
+	rm -f $(OBJ) $(NAME)

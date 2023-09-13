@@ -44,13 +44,8 @@ void print_array(int *array, int start, int end)
 	
 	if (array)
 	{
-		while (i < end)
-		{
-			printf("%d", array[i]);
-			if (i < end - 1)
-				printf(",");
-			i++;
-		}
-		printf("\n");
+		for (i = start; i < end; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 	}
 }
